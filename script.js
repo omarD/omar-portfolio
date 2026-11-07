@@ -66,3 +66,11 @@ if (window.matchMedia('(pointer: fine)').matches) {
     });
   });
 }
+
+// 5. Cursor glow follows the pointer (desktop only)
+const glow = document.querySelector('.cursor-glow');
+if (glow && window.matchMedia('(pointer: fine)').matches) {
+  window.addEventListener('mousemove', (e) => {
+    glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  }, { passive: true });
+}

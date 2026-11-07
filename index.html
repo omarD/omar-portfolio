@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
 <!-- Google Analytics: replace G-PLACEHOLDER with your Measurement ID -->
@@ -20,6 +21,8 @@
 </script>
 </head>
 <body>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
 
 <div class="scroll-progress" aria-hidden="true"></div>
 
@@ -36,6 +39,9 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
+  <figure class="hero__portrait reveal">
+    <img src="assets/portrait.jpg" alt="Omar Dahmouch">
+  </figure>
   <div class="hero__inner">
     <p class="eyebrow reveal">Graphic &amp; Motion Designer · Dammam, KSA</p>
     <h1 class="hero__title reveal">
@@ -66,12 +72,12 @@
       <span class="stat__label">Clients served</span>
     </div>
     <div class="stat reveal">
-      <span class="stat__num" data-count="3600" data-suffix="+">0</span>
+      <span class="stat__num" data-count="3727" data-suffix="+">0</span>
       <span class="stat__label">Project views</span>
     </div>
     <div class="stat reveal">
-      <span class="stat__num" data-count="50" data-suffix="+">0</span>
-      <span class="stat__label">Community followers</span>
+      <span class="stat__num" data-count="49" data-suffix="">0</span>
+      <span class="stat__label">Behance followers</span>
     </div>
   </div>
 </section>
@@ -80,65 +86,71 @@
 <section class="section" id="work">
   <header class="section__head reveal">
     <p class="eyebrow">Selected work</p>
-    <h2 class="section__title">Identity, campaigns &amp; print</h2>
+    <h2 class="section__title">Identity, campaigns <em>&amp;</em> print</h2>
   </header>
 
   <div class="work-grid">
     <article class="work-card reveal" data-tilt>
-      <div class="work-card__media">
-        <img src="assets/work/project-1.jpg" alt="BGTI brand and training materials" loading="lazy" onerror="this.style.display='none'">
-        <div class="work-card__placeholder">Add project-1.jpg</div>
-      </div>
-      <div class="work-card__body">
-        <span class="tag">Print &amp; Training</span>
-        <h3>BGTI training manual redesign</h3>
-        <p>Converted an Arabic electrical skills manual into a print-ready book with a unified layout system.</p>
-      </div>
+      <a href="https://www.behance.net/gallery/215316457/Black-gold-training-Center-website" target="_blank" rel="noopener" class="work-card__link">
+        <div class="work-card__media">
+          <img src="assets/work/project-1.jpg" alt="Black Gold Training Center website" loading="lazy" onerror="this.style.display='none'">
+          <div class="work-card__placeholder">Add project-1.jpg</div>
+        </div>
+        <div class="work-card__body">
+          <span class="tag">Website design</span>
+          <h3>Black Gold Training Center website</h3>
+          <p>Website design for the Black Gold Training Center.</p>
+        </div>
+      </a>
     </article>
-
     <article class="work-card reveal" data-tilt>
-      <div class="work-card__media">
-        <img src="assets/work/project-2.jpg" alt="Kokio social media campaign" loading="lazy" onerror="this.style.display='none'">
-        <div class="work-card__placeholder">Add project-2.jpg</div>
-      </div>
-      <div class="work-card__body">
-        <span class="tag">Social &amp; Campaigns</span>
-        <h3>Kokio premium kitchens campaign</h3>
-        <p>Instagram strategy and content system for a premium kitchens and wardrobes brand.</p>
-      </div>
+      <a href="https://www.behance.net/gallery/187966563/Motion-Design-Pharmaceutical-Works-2022" target="_blank" rel="noopener" class="work-card__link">
+        <div class="work-card__media">
+          <img src="assets/work/project-2.jpg" alt="Pharmaceutical Works motion design (2022)" loading="lazy" onerror="this.style.display='none'">
+          <div class="work-card__placeholder">Add project-2.jpg</div>
+        </div>
+        <div class="work-card__body">
+          <span class="tag">Motion design</span>
+          <h3>Pharmaceutical Works motion design (2022)</h3>
+          <p>Motion graphics piece produced for Pharmaceutical Works.</p>
+        </div>
+      </a>
     </article>
-
     <article class="work-card reveal" data-tilt>
-      <div class="work-card__media">
-        <img src="assets/work/project-3.jpg" alt="TripTime travel documents" loading="lazy" onerror="this.style.display='none'">
-        <div class="work-card__placeholder">Add project-3.jpg</div>
-      </div>
-      <div class="work-card__body">
-        <span class="tag">Brand Identity</span>
-        <h3>TripTime travel branding</h3>
-        <p>Branded travel documents and visual assets for a travel and tourism company.</p>
-      </div>
+      <a href="https://www.behance.net/gallery/184688005/Eltel-social-media" target="_blank" rel="noopener" class="work-card__link">
+        <div class="work-card__media">
+          <img src="assets/work/project-3.jpg" alt="Eltel social media" loading="lazy" onerror="this.style.display='none'">
+          <div class="work-card__placeholder">Add project-3.jpg</div>
+        </div>
+        <div class="work-card__body">
+          <span class="tag">Social media</span>
+          <h3>Eltel social media</h3>
+          <p>Social media content design for Eltel.</p>
+        </div>
+      </a>
     </article>
-
     <article class="work-card reveal" data-tilt>
-      <div class="work-card__media">
-        <img src="assets/work/project-4.jpg" alt="Bostan Restaurant campaign" loading="lazy" onerror="this.style.display='none'">
-        <div class="work-card__placeholder">Add project-4.jpg</div>
-      </div>
-      <div class="work-card__body">
-        <span class="tag">Marketing</span>
-        <h3>Bostan Restaurant campaign</h3>
-        <p>Arabic-language Instagram strategy and campaign materials for a restaurant brand.</p>
-      </div>
+      <a href="https://www.behance.net/gallery/168478819/EYAI-Telecom-competition" target="_blank" rel="noopener" class="work-card__link">
+        <div class="work-card__media">
+          <img src="assets/work/project-4.jpg" alt="EYAI Telecom competition" loading="lazy" onerror="this.style.display='none'">
+          <div class="work-card__placeholder">Add project-4.jpg</div>
+        </div>
+        <div class="work-card__body">
+          <span class="tag">Competition</span>
+          <h3>EYAI Telecom competition</h3>
+          <p>Entry for the EYAI Telecom design competition.</p>
+        </div>
+      </a>
     </article>
   </div>
+  <p class="work-more reveal"><a href="https://www.behance.net/omardahmou0531" target="_blank" rel="noopener">See all 12 projects on Behance ↗</a></p>
 </section>
 
 <!-- MOTION -->
 <section class="section section--dark" id="motion">
   <header class="section__head reveal">
     <p class="eyebrow">Motion</p>
-    <h2 class="section__title">Brands in motion</h2>
+    <h2 class="section__title">Brands <em>in motion</em></h2>
     <p class="section__sub">Short-form motion for social, events and web.</p>
   </header>
   <div class="motion reveal">
@@ -156,7 +168,7 @@
 <section class="section" id="experience">
   <header class="section__head reveal">
     <p class="eyebrow">Experience</p>
-    <h2 class="section__title">Where I've worked</h2>
+    <h2 class="section__title">Where I've <em>worked</em></h2>
   </header>
   <ol class="timeline">
     <li class="timeline__item reveal">
@@ -199,10 +211,15 @@
 <section class="contact" id="contact">
   <div class="contact__inner reveal">
     <p class="eyebrow">Contact</p>
-    <h2 class="contact__title">Let's build something<br>worth remembering.</h2>
+    <h2 class="contact__title">Let's build something<br><em>worth remembering.</em></h2>
     <div class="contact__links">
       <a href="mailto:omardahmouch69@gmail.com" class="btn btn--primary">omardahmouch69@gmail.com</a>
       <a href="tel:+966567175119" class="btn btn--ghost">+966 56 717 5119</a>
+    </div>
+    <div class="social-links">
+      <a href="https://www.behance.net/omardahmou0531" target="_blank" rel="noopener">Behance ↗</a>
+      <a href="https://www.bento.me/omardahmouch" target="_blank" rel="noopener">Bento ↗</a>
+      <a href="https://drive.google.com/drive/folders/122j66A6FZrGKIYG3zWck_Q97ByJamLWQ" target="_blank" rel="noopener">Full visuals ↗</a>
     </div>
     <p class="contact__small">Based in Dammam, Saudi Arabia · Open to remote and relocation roles</p>
   </div>
@@ -210,7 +227,7 @@
 
 <footer class="footer">
   <p>© 2026 Omar Dahmouch</p>
-  <a href="#top">Back to top ↑</a>
+  <div class="footer__links"><a href="https://www.behance.net/omardahmou0531" target="_blank" rel="noopener">Behance</a><a href="https://www.bento.me/omardahmouch" target="_blank" rel="noopener">Bento</a><a href="#top">Back to top ↑</a></div>
 </footer>
 
 <script src="script.js"></script>
