@@ -489,3 +489,33 @@ a { color: inherit; text-decoration: none; }
   .hero__kicker { letter-spacing: 2px; font-size: 10.5px; }
   .hero__kicker::after { display: none; }
 }
+
+/* ===== Advanced motion ===== */
+
+/* Ticker */
+.ticker { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; background: var(--bg); }
+.ticker__track { display: flex; gap: 28px; width: max-content; animation: ticker 38s linear infinite; }
+.ticker__track span { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 34px; color: var(--ink); white-space: nowrap; }
+.ticker__track i { font-style: normal; color: var(--gold); font-size: 18px; align-self: center; }
+@keyframes ticker { to { transform: translateX(-50%); } }
+
+/* Word-by-word heading reveal */
+.word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.08em; }
+.word > span { display: inline-block; transform: translateY(110%); transition: transform 0.9s var(--ease); transition-delay: var(--wd, 0s); }
+.is-visible .word > span, .word.is-in > span { transform: translateY(0); }
+
+/* Work card images wipe in */
+.work-card__media { clip-path: inset(0 0 100% 0); transition: clip-path 1.2s var(--ease); }
+.work-card.is-visible .work-card__media { clip-path: inset(0 0 0 0); }
+.work-card__media img { will-change: transform; }
+
+/* Magnetic buttons */
+.btn { will-change: transform; }
+
+/* Hero: slow zoom on the design */
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track { animation: none !important; }
+  .word > span { transform: none !important; }
+  .work-card__media { clip-path: none !important; }
+}
