@@ -520,3 +520,14 @@ a { color: inherit; text-decoration: none; }
   .word > span { transform: none !important; }
   .work-card__media { clip-path: none !important; }
 }
+
+/* ----- Visuals gallery (Drive) ----- */
+.shots { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; margin-top: 64px; }
+.shot { position: relative; display: block; aspect-ratio: 1 / 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #151c31; }
+.shot img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s var(--ease); }
+.shot:hover img { transform: scale(1.05); }
+.shot__label { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 14px 12px; background: linear-gradient(transparent, rgba(11,15,26,0.9)); font-size: 13px; color: var(--ink); }
+.shot__label em { display: block; font-style: normal; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent-text); margin-bottom: 2px; }
+.shot.is-missing img { display: none; }
+.shot.is-missing::before { content: 'Preview unavailable · open in Drive'; position: absolute; inset: 0; display: grid; place-items: center; padding: 16px; text-align: center; font-size: 13px; color: var(--muted); }
+@media (max-width: 900px) { .shots { grid-template-columns: repeat(2, minmax(0,1fr)); } }
