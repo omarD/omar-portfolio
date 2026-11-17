@@ -74,3 +74,14 @@ if (glow && window.matchMedia('(pointer: fine)').matches) {
     glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
   }, { passive: true });
 }
+
+// 5. Cursor spotlight on work cards (desktop pointers only)
+if (window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('.work-card').forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      card.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  });
+}
