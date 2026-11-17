@@ -568,3 +568,33 @@ a { color: inherit; text-decoration: none; }
   .work-card:hover, .shot:hover { transform: none; }
   .work-card::after { display: none; }
 }
+
+/* ===== Editorial redesign pass ===== */
+/* Asymmetric work grid: alternating wide and narrow cards */
+.work-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 28px; align-items: start; }
+.work-grid .work-card { grid-column: span 6; }
+.work-grid .work-card:nth-child(1) { grid-column: 1 / span 7; }
+.work-grid .work-card:nth-child(2) { grid-column: 8 / span 5; margin-top: 120px; }
+.work-grid .work-card:nth-child(3) { grid-column: 1 / span 5; }
+.work-grid .work-card:nth-child(4) { grid-column: 6 / span 7; margin-top: 120px; }
+.work-grid .work-card:nth-child(2) .work-card__media,
+.work-grid .work-card:nth-child(3) .work-card__media { aspect-ratio: 3 / 4; }
+.work-grid .work-card:nth-child(1) .work-card__media,
+.work-grid .work-card:nth-child(4) .work-card__media { aspect-ratio: 16 / 11; }
+@media (max-width: 900px) {
+  .work-grid { grid-template-columns: 1fr; }
+  .work-grid .work-card,
+  .work-grid .work-card:nth-child(n) { grid-column: 1 / -1; margin-top: 0; }
+}
+
+/* Tools as a typographic composition */
+.tools__list { list-style: none; border-top: 1px solid var(--line); margin-top: 28px; }
+.tools__list li { border-bottom: 1px solid var(--line); padding: clamp(10px, 1.6vw, 18px) 0; }
+.tools__list span {
+  display: block; font-family: 'Instrument Serif', Georgia, serif; font-style: italic;
+  font-size: clamp(34px, 6vw, 84px); line-height: 1.05; letter-spacing: -1px;
+  color: var(--muted); transition: color 0.4s var(--ease), padding-left 0.6s var(--ease);
+}
+.tools__list li:hover span { color: var(--ink); padding-left: clamp(12px, 3vw, 40px); }
+.tools__list li:nth-child(even) span { text-align: right; }
+@media (max-width: 760px) { .tools__list li:nth-child(even) span { text-align: left; } }
