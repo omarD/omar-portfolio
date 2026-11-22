@@ -724,3 +724,12 @@ body { background: var(--bg); }
   .timeline__item > div > p:not(.timeline__meta) { grid-column: 1; grid-row: auto; }
 }
 .timeline__item { row-gap: 0; column-gap: clamp(20px, 5vw, 80px); }
+
+/* Hero photo: wide crop, full-width on desktop */
+.hero__photo img { aspect-ratio: 16 / 9; }
+@media (min-width: 901px) {
+  .hero { grid-template-columns: 1fr; row-gap: clamp(36px, 5vw, 64px); align-content: center; }
+  .hero__text { grid-column: 1; grid-row: 1; }
+  .hero__photo { grid-column: 1; grid-row: 2; width: 100% !important; }
+  .hero__photo img { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; object-position: 50% 30%; border-radius: var(--radius); }
+}
