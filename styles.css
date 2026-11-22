@@ -623,3 +623,43 @@ body { background: var(--bg); }
 /* Keep the blue accent for buttons, labels and links only */
 .btn--primary { background: #080887; color: #fff; }
 .btn--ghost { border-color: rgba(255, 255, 255, 0.4); }
+
+/* ===== Hero v3: black & white, name-led, portrait beside the type ===== */
+.hero {
+  background: #0a0a0a !important; min-height: 100vh; display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); align-items: center; gap: clamp(24px, 4vw, 64px);
+  padding: 130px clamp(20px, 5vw, 64px) 90px;
+}
+.hero::before, .hero::after { display: none !important; }
+.hero__text { position: relative !important; inset: auto !important; grid-column: 1; grid-row: 1; padding: 0; pointer-events: auto; z-index: 2; }
+.hero__kicker, .hero__name, .hero__tag, .hero__tools {
+  position: static !important; width: auto !important; height: auto !important; clip: auto !important;
+  overflow: visible !important; white-space: normal !important;
+}
+.hero__kicker { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+.hero__name {
+  font-family: var(--display); font-weight: 700; color: var(--ink);
+  font-size: clamp(56px, 9.2vw, 170px); line-height: 0.88; letter-spacing: -0.05em;
+}
+.hero__name .w, .hero__name .g { display: block; color: var(--ink); }
+.hero__tag { margin-top: 28px; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
+.hero__tag .dot { color: var(--accent-text); }
+.hero__tools { display: none; }
+.hero__actions { position: relative !important; right: auto !important; bottom: auto !important; margin-top: 44px; }
+.hero__photo {
+  position: relative !important; width: auto !important; height: auto !important; clip: auto !important;
+  overflow: hidden !important; grid-column: 2; grid-row: 1; margin: 0; border-radius: 0;
+}
+.hero__photo img { width: 100%; height: auto; aspect-ratio: 1268 / 1240; object-fit: cover; filter: none; }
+.hero__scroll { display: none; }
+.hero__watermark { display: none; }
+.ticker { margin-top: 0; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding: 110px 20px 70px; gap: 36px; }
+  .hero__photo { grid-column: 1; grid-row: 1; order: -1; width: 100% !important; }
+  .hero__text { grid-column: 1; }
+  .hero__name { font-size: clamp(56px, 19vw, 120px); }
+  .hero__actions { flex-direction: column; width: 100%; }
+  .hero__actions .btn { text-align: center; }
+}
