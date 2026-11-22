@@ -689,3 +689,38 @@ body { background: var(--bg); }
 .services__list li:hover { padding-left: clamp(8px, 2vw, 28px); }
 .services__list li:hover .services__name { color: var(--ink); }
 @media (max-width: 760px) { .services__list li { flex-direction: column; gap: 6px; } }
+
+/* ===== Experience: editorial rows, current role highlighted ===== */
+.timeline { list-style: none; max-width: none; padding-left: 0; position: relative; }
+.timeline::before { display: none; }
+.timeline__item {
+  display: grid; grid-template-columns: minmax(160px, 260px) minmax(0, 1fr); gap: clamp(20px, 5vw, 80px);
+  padding: clamp(28px, 4vw, 48px) 0; border-top: 1px solid var(--line); padding-bottom: clamp(28px, 4vw, 48px);
+}
+.timeline__item:last-child { padding-bottom: clamp(28px, 4vw, 48px); border-bottom: 1px solid var(--line); }
+.timeline__dot { display: none; }
+.timeline__item > div { display: contents; }
+.timeline__meta {
+  font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+  margin: 0; padding-top: 10px;
+}
+.timeline__item h3 {
+  font-family: var(--display); font-weight: 700; font-size: clamp(24px, 3vw, 40px);
+  letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; color: var(--ink);
+}
+.timeline__item p:not(.timeline__meta) { color: var(--muted); font-size: 16px; max-width: 640px; }
+/* place meta in column 1 and heading/text in column 2 */
+.timeline__item > div > .timeline__meta { grid-column: 1; grid-row: 1; }
+.timeline__item > div > h3 { grid-column: 2; grid-row: 1; }
+.timeline__item > div > p:not(.timeline__meta) { grid-column: 2; grid-row: 2; }
+/* Current role */
+.timeline__item:first-child { border-top: 2px solid var(--accent-text); }
+.timeline__item:first-child .timeline__meta { color: var(--accent-text); }
+.timeline__item:first-child h3 { color: var(--ink); }
+@media (max-width: 760px) {
+  .timeline__item { grid-template-columns: 1fr; gap: 10px; }
+  .timeline__item > div > .timeline__meta,
+  .timeline__item > div > h3,
+  .timeline__item > div > p:not(.timeline__meta) { grid-column: 1; grid-row: auto; }
+}
+.timeline__item { row-gap: 0; column-gap: clamp(20px, 5vw, 80px); }
