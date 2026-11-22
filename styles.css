@@ -898,3 +898,9 @@ body { animation: pageIn 0.8s ease both; }
 .nav:not(.is-scrolled) { background: linear-gradient(180deg, rgba(10,10,10,0.7), rgba(10,10,10,0)); }
 .nav:not(.is-scrolled) .nav__links a { color: #e5e5e5; }
 .nav:not(.is-scrolled) .nav__cta { background: rgba(10,10,10,0.5); border-color: #fff; color: #fff; }
+
+/* Work card placeholder: quiet label until real project images are added */
+.work-card__placeholder { z-index: 0; background: linear-gradient(135deg, #15151b 0%, #0e0e12 100%); }
+.work-card__placeholder span {
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); opacity: 0.7;
+}
