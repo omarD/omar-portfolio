@@ -598,3 +598,28 @@ a { color: inherit; text-decoration: none; }
 .tools__list li:hover span { color: var(--ink); padding-left: clamp(12px, 3vw, 40px); }
 .tools__list li:nth-child(even) span { text-align: right; }
 @media (max-width: 760px) { .tools__list li:nth-child(even) span { text-align: left; } }
+
+/* ===== Black & white, large-type direction ===== */
+:root {
+  --bg: #0a0a0a;
+  --bg-2: #121212;
+  --ink: #ffffff;
+  --muted: #a3a3a3;
+  --line: rgba(255, 255, 255, 0.14);
+}
+body { background: var(--bg); }
+.nav.is-scrolled { background: rgba(10, 10, 10, 0.85); }
+.work-card, .shot, .stat { background: var(--bg-2); }
+.stats__grid { background: var(--line); }
+.stat { background: var(--bg); }
+
+/* Oversized display type */
+.section__title { font-size: clamp(56px, 11vw, 190px); letter-spacing: -0.04em; line-height: 0.95; }
+.section__title em { font-style: italic; }
+.contact__title { font-size: clamp(56px, 10vw, 170px); letter-spacing: -0.04em; line-height: 0.95; }
+.tools__list span { font-size: clamp(44px, 9vw, 150px); }
+.hero__name { letter-spacing: -0.04em; }
+
+/* Keep the blue accent for buttons, labels and links only */
+.btn--primary { background: #080887; color: #fff; }
+.btn--ghost { border-color: rgba(255, 255, 255, 0.4); }
