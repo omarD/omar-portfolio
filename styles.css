@@ -663,3 +663,29 @@ body { background: var(--bg); }
   .hero__actions { flex-direction: column; width: 100%; }
   .hero__actions .btn { text-align: center; }
 }
+
+/* ===== Intro and services ===== */
+.intro { max-width: 1280px; margin: 0 auto; padding: clamp(90px, 12vw, 160px) clamp(20px, 5vw, 64px) 40px; }
+.intro__text {
+  font-family: var(--display); font-weight: 500; font-size: clamp(32px, 4.6vw, 72px);
+  line-height: 1.08; letter-spacing: -0.03em; max-width: 1100px; color: var(--ink);
+}
+.intro__text em { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; color: var(--accent-text); }
+.intro__points { list-style: none; display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 48px; }
+.intro__points li { font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; }
+
+.services { max-width: 1280px; margin: 0 auto; padding: 60px clamp(20px, 5vw, 64px) 120px; }
+.services__list { list-style: none; border-top: 1px solid var(--line); margin-top: 28px; }
+.services__list li {
+  display: flex; align-items: baseline; gap: clamp(16px, 3vw, 48px);
+  padding: clamp(18px, 2.4vw, 30px) 0; border-bottom: 1px solid var(--line);
+  transition: padding-left 0.6s var(--ease);
+}
+.services__num { font-size: 14px; color: var(--accent-text); letter-spacing: 1px; min-width: 40px; }
+.services__name {
+  font-family: var(--display); font-weight: 700; font-size: clamp(26px, 4.4vw, 64px);
+  letter-spacing: -0.03em; line-height: 1.05; color: var(--muted); transition: color 0.4s var(--ease);
+}
+.services__list li:hover { padding-left: clamp(8px, 2vw, 28px); }
+.services__list li:hover .services__name { color: var(--ink); }
+@media (max-width: 760px) { .services__list li { flex-direction: column; gap: 6px; } }
