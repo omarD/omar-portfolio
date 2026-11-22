@@ -854,3 +854,20 @@ body { animation: pageIn 0.8s ease both; }
   .hero__name .ch { animation: none !important; }
   .hero__name .ch:hover { transform: none; }
 }
+
+/* Full landscape portrait: desktop shows the photo as a wide band under the name */
+@media (min-width: 901px) {
+  .hero { min-height: auto; padding-bottom: 0; display: flex; flex-direction: column; }
+  .hero__text { padding-bottom: 0; }
+  .hero__text .hero__actions { position: relative !important; left: auto; bottom: auto; margin-top: 44px; }
+  .hero__photo {
+    position: relative !important; top: auto; right: auto; width: 100% !important;
+    margin: clamp(40px, 6vh, 70px) 0 0; z-index: 1;
+  }
+  .hero__photo img { aspect-ratio: 21 / 9; width: 100%; object-fit: cover; object-position: 50% 32%; }
+}
+@media (min-width: 901px) {
+  .hero { padding-top: 110px; }
+  .hero__photo { margin-top: 36px !important; }
+  .hero__text .hero__actions { margin-top: 36px; }
+}
