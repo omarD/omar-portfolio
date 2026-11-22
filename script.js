@@ -85,3 +85,18 @@ if (window.matchMedia('(pointer: fine)').matches) {
     });
   });
 }
+
+// 6. Hero name: split into letters for a staggered entrance
+document.querySelectorAll('.hero__name .w, .hero__name .g').forEach((el) => {
+  const text = el.textContent.trim();
+  el.setAttribute('aria-label', text);
+  el.textContent = '';
+  [...text].forEach((ch, i) => {
+    const s = document.createElement('span');
+    s.className = 'ch';
+    s.setAttribute('aria-hidden', 'true');
+    s.style.setProperty('--i', i);
+    s.textContent = ch;
+    el.appendChild(s);
+  });
+});
